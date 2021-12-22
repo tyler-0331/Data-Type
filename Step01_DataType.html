@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType.html</title>
+</head>
+<body>
+    <h1>javascript 데이터 type</h1>
+    <button onclick="move()">hello 페이지로 이동하기</button>
+    <button onclick="makeImage()">이미지 나오게해줘</button>
+    <button onclick='add()' id="addNum">0</button>
+    <script>
+        //웹 브라우저야 위에 버튼을 누르면 hello.html 페이지를 열어줘!
+
+        function move() {
+            location.href="hello.html";
+        }
+
+        function makeImage(){
+            let image=document.createElement("img");
+            image.setAttribute("src", "images/kim1.png");
+            document.querySelector("body").append(image);
+        }
+
+        let count=0;
+
+        function add() {
+            count= count + 1;
+            document.querySelector("#addNum").innerText=count;
+        }
+
+        makeImage()
+        /*
+            프로그래밍은 무엇인가?
+
+            특정 시점에 실행할 동작을 미리 준비해 놓고
+            해당 특정 시점에 준비해둔 동작을 일괄 수행하게 하는 것
+
+        */
+
+    </script>
+</body>
+</html>
